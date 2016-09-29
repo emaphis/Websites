@@ -1,0 +1,204 @@
+
+* block elements
+ Block elements are indicated by <br> <body> <p> <div> elements - example:
+ <br />
+ This is a line of text
+
+the <div> element is a multi-purpose element that simply gives you a container for other content. You can nest many different div elements within each other, you can create sibling elements with content that should be rendered on different lines or you can create complex nested block structures.
+
+There are many other block elements including:
+
+    article
+    aside
+    blockquote
+    <br />
+    button
+    canvas
+    caption
+    dd, dl dt
+    h1, h2, h3, h4, h5, h6
+    footer, header
+    fieldset
+    form
+
+* inline elements
+
+  
+    <strong> </strong>
+    <ins> </ins>
+    <del> </del>
+    <sup> </sup
+    <sub> </sub>
+    <i> </i>
+    <em> </em>
+* formatting elements
+  <b> </b> makes an element bold but...
+  <strong> </strong> adds a semantic element to text\
+
+  <i> </i> italicizes an element but..
+  <em> </em>  semantically emphasizes an element.
+
+  <small>  small text
+
+  <mark>  Marked text
+
+  <del>   Deleted text
+
+  <ins>  Inserted text
+
+  <sub>  Subscripted  text
+
+  <sup>  Superscripted text
+
+* hyperlinks
+  
+  <body>
+    <a href="#skipToSection">Go to Highlighted Section</a>
+    <p id="topSection">
+    <h5 id="sampleLink">Sample Text</h5>
+    <a href="http://www.edx.org" target="_self" rel="author> </a>
+    <br />
+    <a href="http://www.microsoft.com" target="_blank" rel="help">Go to Microsoft</a>
+    <p id="SkipToSection">
+        Some very important text
+        <br />
+        <a href="#topSection">"Go to Top"</a>
+    </p>
+  </body>
+    <a href="#sampleLink">Sample Link</a>
+  </html>
+
+* user input
+<form action="" method="">
+</form>
+
+** example - textarea
+<textarea rows="3" cols="30">
+We live in a mobile-first and cloud-first world. Computing is ubiquitous, and experiences span devices and exhibit ambient intelligence.
+</textarea>
+
+** select statement
+<select>
+    <option value="DAT202x">Processing Big Data with Azure HDInsight</option>
+    <option value="DAT204x">Introduction to R Programming</option>
+    <option value="CLD203x">Office 365: Managing Identities and Services</option>
+    <option value="DEV208x">Introduction to jQuery</option>
+</select>
+
+<select>
+    <optgroup label="Data Platform">
+        <option value="DAT202x">Processing Big Data with Azure HDInsight</option>
+        <option value="DAT204x">Introduction to R Programming</option>
+    </optgroup>
+    <optgroup label="Cloud">
+        <option value="CLD203x">Office 365: Managing Identities and Services</option>
+    </optgroup>
+    <optgroup label="Development">
+        <option value="DEV208x">Introduction to jQuery</option>
+    </optgroup>
+</select>
+
+** <input> element
+<form ...>
+  Username: <input type="text" name="username" />
+  E-mail Address: <input type="email" name="emailaddress" />
+</form>
+
+<form action="http://www.example.com/formsubmission" method="POST">
+ First Name: <input type="text" name="fname" />
+ Last Name: <input type="text" name="lname" />
+ <input type="submit" value="Save Information" />
+</form> 
+
+<form action="http://www.example.com/formsubmission" method="GET">
+    <fieldset>
+        <legend>User Information</legend>
+        First Name: <input type="text" name="fname" />
+        Last Name: <input type="text" name="lname" />
+    </fieldset>  
+    <fieldset>
+        <legend>Location</legend>
+        Hometown: <input type="text" name="home" />
+    </fieldset>  
+    <input type="submit" value="Submit Information" />  
+</form>
+
+button 	This renders a button that is typically used with JavaScript frameworks (such as Angular or Knockout)
+checkbox This renders a checkbox that can be independently clicked. The checkbox has a value of on or off
+file 	         This renders a field for file selection and a Browse button to select the file on the client device
+hidden 	 This does not render anything but it will store a value. This can be used to store values that need to be sent to the server when the form is saved
+image 	 This renders an image that functions as a submit button (click on image to save form)
+password This renders a text input where the characters are masked for privacy.
+radio 	This renders a radio button that can be selected as part of a group of radio buttons.
+text 	This renders a basic text input field.
+submit 	This renders a button that submits the HTML form.
+
+** <button> element
+
+<button type="button">
+    <img src="images/microsoft.png" alt="Microsoft" />
+    <br />
+    Apply to Microsoft!
+</button>
+
+** validation:
+
+required
+<input name="email_address" type="email" required="required" />
+
+pattern
+<input name="zip_code" type="text" pattern="\d{5}(-\d{4})?" required="required" />
+
+readonly
+<input name="profile_url" type="url" readonly="readonly" />
+
+disabled
+<input type="submit" disabled="disabled" />
+
+min/max
+range: <input name="issue_quantity" type="range" min="1" max="15" />
+date: <input name="service_date" type="date" min="2000-01-01" max="2999-12-31">
+
+autocomplete
+<input name="api_key" type="text" autocomplete="off" />
+
+placeholder
+<input name="account_name" type="text" placeholder="Account name must contain at least 4 characters." />
+
+** new input types in HTML5
+
+Type 	Functionality
+color 	This renders a color picker.
+date 	This renders a date control that allows you to select year, month and day without time.
+datetime-local 	This renders a date control that allows you to select year, month, day and time without time-zone information stored.
+email 	This renders a text input field and validates that the e-mail address is valid.
+month 	This renders a date control that allows you to select year and month only.
+number 	This renders a text input field that only allow numeric input.
+range 	This renders a control (typically a slider in most browsers) that allows a user to select an imprecise number.
+search 	This renders a text input field used for search.
+tel 	This renders a text input field used for telephone numbers.
+time 	This renders a date control that allows you to enter time without time-zone information stored.
+url 	This renders a text input field and validates that the url is valid.
+week 	This renders a date control that allows you to select year and week only.
+
+** skipping validation
+
+<form novalidate="novalidate">
+</form>
+* semantic elements
+Semantic Element
+Header
+Footer
+Nav
+Section
+Article
+Aside
+Details
+Figure
+Figcaption
+Main
+Mark
+Summary
+Time
+
+Good for: Machine inference, Design.
