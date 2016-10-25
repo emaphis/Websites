@@ -125,7 +125,7 @@ Use optgroup to group related options
 
 button 	This renders a button that is typically used with JavaScript frameworks (such as Angular or Knockout)
 checkbox This renders a checkbox that can be independently clicked. The checkbox has a value of on or off
-file 	         This renders a field for file selection and a Browse button to select the file on the client device
+file 	  This renders a field for file selection and a Browse button to select the file on the client device
 hidden 	 This does not render anything but it will store a value. This can be used to store values that need to be sent to the server when the form is saved
 image 	 This renders an image that functions as a submit button (click on image to save form)
 password This renders a text input where the characters are masked for privacy.
@@ -215,3 +215,82 @@ Semantic Element:
  Time
 
 Good for: Machine inference, Design.
+
+* SVG - Scalable Vector Graphics
+** SVG Shapes
+<svg height="200" width="400">
+    <rect x="100" y="50" rx="20" ry="20" width="250" height="100" fill="#1B043C" />
+    <rect x="100" y="50" width="200" height="100" fill="#1B043C" />
+    <circle cx="100" cy="100" r="50" fill="#472772" />
+    <text fill="#D7BFF3" font-size="28" font-family="Segoe UI Light" x="160" y="108">CompanyName</text>
+</svg>
+
+*** circle
+cx & cy         These two attributes together define the coordinates for the center of the circle. By default, the center of the circle is (0,0)
+r 	        This attribute specifies the radius of the circle
+fill 	        This attribute defines the color used for the interior of the circle
+stroke 	        This attribute defines the color used for the border of the circle
+stroke-width 	This attribute defines the width of the border of the circle
+
+<svg height="200" width="200">
+    <circle cx="100" cy="100" r="50" fill="#6CBEE2" />
+</svg>
+
+*** rectangle
+
+x & y 	These two attributes together define the coordinates for the top-left of the rectangle. By default, the top-left of the rectangle is (0,0)
+rx & ry       These two attributes specify the radius for rounded corners on the x or y axis
+width 	      This attribute defines the width of the rectangle
+height 	      This attribute defines the height of the rectangle
+fill 	      This attribute defines the color used for the interior of the rectangle
+stroke 	      This attribute defines the color used for the border of the rectangle
+stroke-width  This attribute defines the width of the border of the rectangle
+
+<svg height="200" width="200">
+    <rect x="0" y="0" width="200" height="100" fill="#15744C" />
+</svg>
+
+*** text
+x & y 	        These two attributes together define the coordinates for the bottom-left of the text.
+fill 	        This attribute defines the color used for the text
+font-size 	This attribute defines the size of the text font
+font-family 	This attribute defines the text font
+
+<svg height="200" width="200">
+    <text font-size="28" font-family="Segoe UI Light" x="0" y="30" fill="#B6652A">Example</text>
+</svg>
+
+** SVG Element
+<svg height="200" width="400">
+   <rect x="100" y="50" rx="20" ry="20" width="250" height="100" fill="#1B043C" />
+   <rect x="100" y="50" width="200" height="100" fill="#1B043C" />
+   <circle cx="100" cy="100" r="50" fill="#472772" />
+   <text fill="#D7BFF3" font-size="28" font-family="Segoe UI Light" x="160" y="108">
+     CompanyName
+   </text>
+ </svg>
+* Media Elements
+** Video Element
+<video height="500" controls="controls" poster="screenshot.png">
+    <source src="advertisement.webm" type="audio/webm" />
+    <source src="advertisement.ogg" type="audio/ogg" />
+    <source src="advertisement.mp4" type="audio/mp4" />
+</video>deo Element
+
+** Audio Element
+<audio autoplay="autoplay" controls="controls" loop="loop">
+    <source src="popopen.wav" type="audio/wav" />
+    <source src="popopen.ogg" type="audio/ogg" />
+    <source src="popopen.mp3" type="audio/mpeg" />
+</audio>
+
+** Handling Unsupported browsers
+<audio controls="controls">
+    <source src="audio/music.ogg" type="audio/ogg" />
+    Sorry, your browser does not support the OGG format.
+</audio>
+
+<video controls="controls">
+    <source src="video/movie.webm" type="video/webm" />
+    Sorry, your browser does not support the WebM format.
+</video>
