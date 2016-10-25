@@ -84,7 +84,7 @@ We live in a mobile-first and cloud-first world. Computing is ubiquitous, and ex
     <option value="CLD203x">Office 365: Managing Identities and Services</option>
     <option value="DEV208x">Introduction to jQuery</option>
 </select>
-
+Use optgroup to group related options
 <select>
     <optgroup label="Data Platform">
         <option value="DAT202x">Processing Big Data with Azure HDInsight</option>
@@ -141,6 +141,17 @@ submit 	This renders a button that submits the HTML form.
     Apply to Microsoft!
 </button>
 
+** submit button
+<form action="http://www.example.com/formsubmission" method="POST">
+  First Name: <input type="text" name="fname" />
+  Last Name: <input type="text" name="lname" />
+  <input type="submit" value="Save Information" />
+</form>
+
+form   - allows us to collect information using various input fields
+action - specifies where the form will be submitted
+method - GET or POST
+
 ** validation:
 
 required
@@ -186,19 +197,21 @@ week 	This renders a date control that allows you to select year and week only.
 <form novalidate="novalidate">
 </form>
 * semantic elements
-Semantic Element
-Header
-Footer
-Nav
-Section
-Article
-Aside
-Details
-Figure
-Figcaption
-Main
-Mark
-Summary
-Time
+  Give meaning to html elements that people and machines can infer
+
+Semantic Element:
+ Header
+ Footer
+ Nav
+ Section
+ Article
+ Aside
+ Details
+ Figure
+ Figcaption
+ Main
+ Mark
+ Summary
+ Time
 
 Good for: Machine inference, Design.
