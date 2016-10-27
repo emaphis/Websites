@@ -294,3 +294,156 @@ font-family 	This attribute defines the text font
     <source src="video/movie.webm" type="video/webm" />
     Sorry, your browser does not support the WebM format.
 </video>
+* CSS
+** Style Defintions
+  - CSS selectors
+  - delcarations - one or more property and value
+  hl { color : red; }
+
+** Style Inheritance
+   - some styles are inherited from parent elements to children elements
+   - Inheritance can come from three different places
+     - Browser
+     - User Options
+     - Author CSS
+   - !important keyword
+** Box Model
+*** Margin and Padding
+    - Margin - the space between an HTML element and the surrounding element
+    - margin-bottom, margin-top, margin-left, margin-right
+    - CSS margin:
+        margin: 10px 10px 10px 10px
+    - CSS margin: value
+        margin: 10px  - sets all four values
+    - CSS margin: margin-(direction)
+        margin-top: 10px
+
+    - Padding - the amount of space that appear between the content of an
+      element and the element border.
+    - padding-bottom, padding-top, padding-left, padding-right
+    - CSS padding: 4 values
+        padding: 10px 10px 10px 10px
+    - CSS padding: value
+        padding: 10px  - set all four values
+    - CSS padding-(direction)
+*** CSS Media Queries
+    - allow us to conditionally apply CSS to specific scenarios based on properties
+      of current browser
+    - Media Types: screen desktop tablet phone laptop
+      @media screen {
+         body {
+           background-color: red;
+         }
+      }
+    - printing:
+      @media print {
+        body {
+          background-color: white;
+        }
+      }
+    - speech - screen reader
+      @media speech {
+        aside {
+          display: none;
+        }
+      }
+
+    - Media Widths
+      - browsers at least 500 pixels wide:
+        @media (min-width: 500px) {
+          nav {
+           widthL 100px;
+          }
+        }
+      - minimum height:
+        @media (max-width: 500px) {
+           nav {
+             width: 50px;
+           }
+         }
+
+*** Additional Media Query Features
+    - Link Element - separate stylesheets for each platform
+    <head>
+      <link rel="stylesheet" href="base.css" />
+      <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 1000px)" />
+      <link rel="stylesheet" href="print.css" media="print" />
+    </head>
+
+    - Additional Keywords
+      all - specifies that media query should be use by all devices:
+      @media all {
+         body > article {
+           font-family: serif;
+         }
+      }
+
+     not - reverses the meaning of a media query
+
+     only Keyword for legacy support.
+** Fonts
+*** CSS Font Properties
+article {
+   font-family: Segoe;
+}
+header {
+   font-family: Times;
+}
+
+article {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino ;
+}
+header {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Arial ;
+}
+
+- default fonts for each font type:
+  - sans-serif
+  - serif
+  - monospace
+article {
+    font-family: "Segoe UI", Segoe, sans-serif;
+}
+header {
+    font-family: "Times New Roman", Times, serif;
+}
+
+*** Linking to External Font Files in CSS
+    - importing an external font into CSS
+@font-face {
+    font-family: "Demo Font";
+    src: url(/demofont.otf);
+}
+
+footer {
+  font-family: "Demo Font", Arial, sans-serif;
+}
+
+- the @font-fact style can inclued other properties:
+
+@font-face {
+    font-family: "Simple Font";
+    src: url(simplefont.ttf);
+}
+@font-face {
+    font-family: "Simple Font";
+    font-weight: bold;
+    src: url(simplefont_bold.ttf);
+}
+@font-face {
+    font-family: "Simple Font";
+    font-style: italic;
+    src: url(simplefont_italic.ttf);
+}
+
+- then you can use them throughout the CSS file:
+
+body {
+    font-family: "Simple Font";
+}
+footer {
+    font-style: italic;
+}
+header {
+    font-weight: bold;
+}
