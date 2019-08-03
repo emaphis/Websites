@@ -1,0 +1,9 @@
+test-site/nbproject/private/
+test-site/nbproject/private/
+test-site/nbproject/*
+test-site/nbproject/*
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
