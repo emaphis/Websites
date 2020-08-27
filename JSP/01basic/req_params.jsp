@@ -6,7 +6,7 @@
     Try: http://localhost:8080/tests/req_params.jsp?a=b&c=d&a=zzz&empty=&empty=&1=22
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.*, java.io.*" %>
 <!DOCTYPE html>
 <%
@@ -22,9 +22,7 @@
         Map size = <%=map.size()%>
         <table border="1">
             <tr>
-                <td>Map element</td>
-                <td>Par name</td>
-                <td>Par value[s]</td>
+                <td>Map element</td><td>Par name</td><td>Par value[s]</td>
             </tr>
             <%
                 for (int k = 0; k < keys.length; k++) {
